@@ -1,0 +1,75 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "dnd",
+    "version": "1.0",
+    "x-logo": {
+      "url": ""
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.example.io"
+    }
+  ],
+  "paths": {
+    "/individuals": {
+      "summary": "",
+      "get": {
+        "tags": [],
+        "summary": "A list of all individuals",
+        "responses": {
+          "200": {}
+        }
+      },
+      "x-last-modified": 1659640402819
+    },
+    "/individuals/{id}": {
+      "get": {
+        "tags": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id",
+            "name": "id",
+            "x-last-modified": 1659640920610
+          }
+        ]
+      },
+      "x-last-modified": 1659640904376
+    },
+    "/locations/{id}": {
+      "get": {
+        "tags": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id",
+            "name": "id",
+            "x-last-modified": 1659641052310
+          }
+        ]
+      },
+      "x-last-modified": 1659641043583
+    }
+  },
+  "components": {
+    "parameters": {
+      "id": {
+        "example": "GET /api/examples/5c2e12a0-3391-4a4a-b82e-1f7de848c7aa",
+        "name": "id",
+        "description": "**ID**. \n You can call a GT API operation with an ID in the path. \n The API responds with the exact result.",
+        "schema": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "in": "path",
+        "x-last-modified": 1659640833487
+      }
+    },
+    "securitySchemes": {},
+    "schemas": {},
+    "headers": {},
+    "responses": {}
+  },
+  "tags": [],
+  "security": []
+}
